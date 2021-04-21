@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #060924;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    position: absolute;
+    left: 50%;
+    top: 36%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+ul:nth-of-type(2) {
+    top: 50%;
+}
+
+ul:nth-of-type(3) {
+    top: 64%;
+}
+
+li{
+    margin: 2px;
+}
+
+input{
+    position: relative;
+    height: 80px;
+    width: 80px;
+    margin: 0;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+div{
+    position: absolute;
+    top: 4px;
+    height: 80px;
+    width: 80px;
+    color: #040933;
+    display:flex;
+    justify-content: center;
+    place-items: center;
+    font-size: 48px;
+    background-color: #040623;
+    border-radius: 30px;
+    box-sizing: border-box;
+    border: 4px solid #0a042b;
+    box-shadow: 4px 4px 16px black, -2px -2px 2px #444e70;
+}
+
+input[type="checkbox"]:checked ~ div {
+    box-shadow: inset 4px 4 px 10px #06010f;
+    color: yellow;
+    text-shadow: 0 0 15px pink, 0 0 30px red, 0 0 60px green,
+    0 0 120px white, 0 0 240px yellow;
+    animation: glow 0.5s linear infinite;
+}
+
+@keyframes glow {
+    0% {
+        filter:hue-rotate(0deg);
+    }
+
+    100% {
+        filter:hue-rotate(360deg);
+    }
+}
